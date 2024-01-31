@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Damals in Nordkorea</title>
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/svg-icons.css">
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .slideInLeft {
+        -webkit-animation: slideInLeft 0;
+        animation: slideInLeft 0;
+      }
+
+      .slideInRight {
+        -webkit-animation: slideInRight 0;
+        animation: slideInRight 0;
+      }
+
+      div.embed {
+        animation: none;
+        -webkit-animation: none;
+      }
+
+      video {
+        animation: none;
+        -webkit-animation: none;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <main role="main">
+      <article id="webslides">
+
+
+
+        <section class="fullscreen aligncenter bg-black">
+          <div class="embed">
+            <video autoplay>
+              <source src="videos/1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </section>
+
+        <section class="fullscreen aligncenter bg-black">
+          <div class="embed">
+            <video autoplay>
+              <source src="videos/2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </section>
+
+        <section class="fullscreen aligncenter bg-black">
+            <div class="embed">
+              <video autoplay>
+                <source src="videos/3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </section>
+
+
+      </article>
+    </main>
+    <!--main-->
+    <!-- Required -->
+
+    <script src="../static/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+
+      ////////////////////////////////////////////////////////////////
+      ///////////////////////////////////new code starts here
+
+      if ( ws.initialised === true ) {
+      window.ws.el.addEventListener('ws:slide-change', function (e) {
+
+      // Select all video elements
+      var allVideos = document.querySelectorAll('video');
+
+      // Reset the currentTime of each video to 0
+      allVideos.forEach(function(video) {
+      video.currentTime = 0;
+      });
+
+      });
+      }
+      ////////////////////////////////////////////////////////////////
+      ///////////////////////////////////new code ends here
+
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="../static/js/svg-icons.js"></script>
+
+  </body>
+</html>
